@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li {
+    border: 2px solid #000;
+    border-left: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:first-child {
+    border-left: 2px solid #000;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+section {
+    padding: 20px; 
+    border-bottom: 2px solid #ccc; 
+    margin-bottom: 0;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+p {
+    padding: 40px;
+}
+
+/* Styling for the banner slider */
+.banner-slider {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex; 
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    max-height: 500px;
+    object-fit: cover; /
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Facilitation Section styles */
+.facilitation-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.facilitation-section h2 {
+    margin-bottom: none;
+    font-size: 24px;
+}
+
+.facilities {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.facility {
+    text-align: center;
+    flex-basis: 50%;
+    max-width: 300px;
+}
+
+.facility img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.facility p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Achievement Section styles */
+.achievement-section {
+    padding: 20px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-top: none;
+}
+
+.achievement-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.achievements {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 0;
+}
+
+.achievement {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    flex: 1;
+    margin: 10px; 
+    min-width: 200px; 
+}
+
+/* Message Section styles */
+.message-section h2 {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Kotak untuk form */
+.form-box, .result-box {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style untuk form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white; 
+    padding: 12px; 
+    width: 100%; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .facilities {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .facility {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .achievement {
+        width: 90%;
+        margin: 10px auto;
+    }
+}

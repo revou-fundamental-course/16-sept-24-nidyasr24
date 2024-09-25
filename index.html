@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandS Course</title>
+    <link rel="icon" href="asset/logo.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+    
+<body>
+    <header>
+        <img src="asset/logo.png" alt="Logo" width="50">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#facilitation">Our Facilitation</a></li>
+                <li><a href="#achievement">Achievement</a></li>
+                <li><a href="#join-us">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section class="welcome-section" id="home">
+            <h1>Hi <span id="user-name">[Name]</span>, Welcome to SandS Course Website</h1>
+            <p style="text-align: justify">We are thrilled to have you here. Our platform is dedicated to providing innovative solutions
+                and valuable resources that cater to your needs. Whether you're seeking information, inspiration,
+                or connection, our diverse offerings are designed to empower you. Explore our various sections
+                to discover our services, achievements, and the unique features that set us apart. Join us on this
+                exciting journey, and let's embark on a path of growth and success together!</p>  
+            <div class="banner-slider">
+                <div class="slides">
+                    <img src="asset/banner1.jpg" alt="Banner Image 1" class="slide">
+                    <img src="asset/banner2.jpg" alt="Banner Image 2" class="slide">
+                    <img src="asset/banner3.jpg" alt="Banner Image 3" class="slide">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>        
+        </section>    
+
+        <!-- Facilitation Section -->
+        <section class="facilitation-section" id="facilitation">
+            <h2>Our Facilitation</h2>
+            <div class="facilities">
+                <div class="facility">
+                    <img src="asset/tc.jpg" alt="Professional Teacher">
+                    <p>Professional Teacher</p>
+                </div>
+                <div class="facility">
+                    <img src="asset/lb.jpg" alt="Library">
+                    <p>Library</p>
+                </div>
+                <div class="facility">
+                    <img src="asset/cr.jpg" alt="Classroom">
+                    <p>Classroom</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Achievement Section -->
+        <section class="achievement-section" id="achievement">
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <article class="achievement">
+                    <h3>Best Project Award</h3>
+                    <p>Received the Best Project Award for developing an innovative solution during the 2023 Hackathon event.</p>
+                    <p><strong>Date:</strong> June 2023</p>
+                </article>
+
+                <article class="achievement">
+                    <h3>Top Sales Performance</h3>
+                    <p>Achieved the highest sales performance in Q1 2023 at the company, leading to a 25% increase in revenue.</p>
+                    <p><strong>Date:</strong> March 2023</p>
+                </article>
+
+                <article class="achievement">
+                    <h3>Certified Data Analyst</h3>
+                    <p>Completed certification as a Data Analyst from a renowned institution, enhancing skills in data processing and analysis.</p>
+                    <p><strong>Date:</strong> January 2023</p>
+                </article>
+
+                <article class="achievement">
+                    <h3>Community Service Award</h3>
+                    <p>Recognized for outstanding contribution to community service initiatives, improving local education and health resources.</p>
+                    <p><strong>Date:</strong> September 2023</p>
+                </article>
+
+                <article class="achievement">
+                    <h3>Innovation Challenge Winner</h3>
+                    <p>Won the Innovation Challenge for developing a mobile application that addresses everyday problems faced by users.</p>
+                    <p><strong>Date:</strong> April 2024</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Join Us Section -->
+        <section class="container" id="join-us">
+            <div class="form-box">
+                <h3>Join Us Now!</h3>
+                <br>
+                <form onsubmit="return validateForm()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+
+                    <label for="gender">Gender:</label>
+                    <div class="gender-options">
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="result-box">
+                <h3>User Data:</h3>
+                <p><strong>Name:</strong> <span id="result-name"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="result-dob"></span></p>
+                <p><strong>Gender:</strong> <span id="result-gender"></span></p>
+                <p><strong>Message:</strong> <span id="result-message"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="text-align: center">&copy; 2024 SandS Course. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        var userName = prompt("Please enter your name:");
+        if (userName) {
+            document.getElementById("user-name").textContent = userName;
+        }
+    </script>
+</body>
+</html>
